@@ -23,6 +23,12 @@
             ProcessBooks(books, BookFunctions.GetTitle);
             ProcessBooks(books, BookFunctions.GetAuthors);
             ProcessBooks(books, BookFunctions.GetPrice);
+
+            //anonymous function
+            Func<Book, string> GetISBN = delegate(Book book) { return book.ISBN; };
+            ProcessBooks(books, GetISBN);
+            //lambda expression
+            ProcessBooks(books, (b) => b.PublicationDate);
             #endregion
 
             #region Part 2
