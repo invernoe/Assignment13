@@ -36,6 +36,7 @@
             Console.WriteLine(myList.FindLast((a) => a % 2 == 0));
             Console.WriteLine(myList.FindLastIndex((a) => a % 2 == 0));
             Console.WriteLine(myList.TrueForAll((a) => a % 2 == 0));
+            myList.ForEach(Console.WriteLine);
             #endregion
         }
     }
